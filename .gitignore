@@ -1,0 +1,99 @@
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.iml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+.venv/
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+pip-log.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+dist/
+build/
+*.egg-info/
+.eggs/
+.wheels/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Node / JS ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+.cache/
+.parcel-cache/
+.next/
+out/
+dist/
+build/
+
+# --- Logs / Temp ---
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# --- Archives / Large local artifacts (keep intentional releases checked in) ---
+# (Do NOT ignore all .zip/.pdf globally — only ignore typical local outputs.)
+/tmp/
+/temp/
+/downloads/
+
+# --- LaTeX auxiliary (if any docs are built locally) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# --- Model / Data artifacts (keep source data explicit) ---
+/data/generated/
+/models/generated/
+/sim/output/
+/verification/output/
+
+# --- Secrets / Keys (never commit) ---
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.der
+*.jks
+.env
+.env.*
+secrets/
+**/secrets/
