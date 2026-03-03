@@ -1,4 +1,4 @@
-id="ix_sim_readme_v1"
+
 # Simulation Harness (Scaffold)
 
 Status: **Scaffold only** (no locked equations yet)
