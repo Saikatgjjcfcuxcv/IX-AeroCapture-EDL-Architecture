@@ -1,0 +1,20 @@
+{
+  "required_present": [
+    "config_hash",
+    "model_versions",
+    "telemetry_path",
+    "notes"
+  ],
+  "required_substrings": {
+    "notes": [
+      "Scaffold"
+    ]
+  },
+  "numeric_ranges": {
+    "delta_v_removed_m_s": null,
+    "delta_v_remaining_m_s": null,
+    "q_max_Pa": null,
+    "g_max": null,
+    "heating_proxy_max_W_m2": null
+  }
+}
