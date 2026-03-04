@@ -1,0 +1,30 @@
+{
+  "mission": "UNSET (aerocapture-to-orbit vs landing EDL)",
+  "body": "Mars",
+
+  "vehicle": {
+    "mass_kg": 10000,
+    "ref_area_m2": 50.0,
+    "cd": 1.5,
+    "cl": 0.0
+  },
+
+  "constraints": {
+    "q_max_Pa": null,
+    "g_max": null,
+    "heating_max_W_m2": null,
+    "mass_penalty_max_kg": null,
+    "stowed_volume_max_m3": null,
+    "peak_power_max_W": null
+  },
+
+  "atmosphere_model_id": "UNSET",
+  "aero_model_id": "UNSET",
+  "thermal_model_id": "UNSET",
+  "gnc_model_id": "UNSET",
+  "prebrake_model_id": "NONE",
+
+  "params": {
+    "notes": "Placeholders only. Lock mission focus + constraints before implementing models."
+  }
+}
