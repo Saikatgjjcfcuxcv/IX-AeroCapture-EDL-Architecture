@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a bug in code, tooling, or documented assumptions
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Keep this repo reality-locked.
+        If the bug is about a physics assumption, include the evidence level and why it fails.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken? One paragraph.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Commands, config files, inputs, and exact steps to reproduce.
+      placeholder: |
+        1) python -m sim.run sim/example_configs/minimal_run.json
+        2) observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Evidence level
+      description: |
+        Is this an E1 toy-model bug, E2 implementation bug, etc?
+        If it’s a physics/assumption issue, cite or explain.
+      placeholder: "Evidence level: E1/E2/E3... | Notes:"
+    validations:
+      required: false
