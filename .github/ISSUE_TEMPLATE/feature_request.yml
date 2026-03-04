@@ -1,0 +1,56 @@
+name: Feature request
+description: Propose a new module, model, verification case, or proof/telemetry enhancement
+title: "[FEAT] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature proposals should map to: (a) external momentum coupling, (b) controllability,
+        and (c) proof/verification. If it impacts scope, propose a Decision Log entry.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What problem are we solving?
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: High-level design. Name affected modules and interfaces.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Primary phase affected
+      options:
+        - Pre-brake (optional)
+        - Aerocapture / initial energy dump
+        - EDL shaping (GNC / lift-drag modulation)
+        - Terminal trim
+        - Proof layer (telemetry/verification)
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Metrics / constraints impacted
+      description: Which metrics in docs/requirements does this change?
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence target
+      description: What evidence level do we target initially (E1–E5) and what would upgrade it?
+      placeholder: "Start at E1/E2. Upgrade path: E3 cross-check, E4 bench test..."
+    validations:
+      required: false
