@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IX Proof Bundle",
+  "type": "object",
+  "required": [
+    "run_id",
+    "config_hash",
+    "config_echo_path",
+    "telemetry_path",
+    "result_path",
+    "env",
+    "bundle_hash"
+  ],
+  "properties": {
+    "run_id": { "type": "string" },
+    "config_hash": { "type": "string" },
+    "config_echo_path": { "type": "string" },
+    "telemetry_path": { "type": "string" },
+    "result_path": { "type": "string" },
+    "env": { "type": "object" },
+    "bundle_hash": { "type": "string" }
+  },
+  "additionalProperties": false
+}
