@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IX AeroCapture EDL RunConfig",
+  "type": "object",
+  "required": ["mission", "body", "vehicle"],
+  "properties": {
+    "mission": { "type": "string" },
+    "body": { "type": "string" },
+
+    "vehicle": {
+      "type": "object",
+      "required": ["mass_kg", "ref_area_m2", "cd"],
+      "properties": {
+        "mass_kg": { "type": "number", "exclusiveMinimum": 0 },
+        "ref_area_m2": { "type": "number", "exclusiveMinimum": 0 },
+        "cd": { "type": "number", "exclusiveMinimum": 0 },
+        "cl": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "q_max_Pa": { "type": ["number", "null"] },
+        "g_max": { "type": ["number", "null"] },
+        "heating_max_W_m2": { "type": ["number", "null"] },
+        "mass_penalty_max_kg": { "type": ["number", "null"] },
+        "stowed_volume_max_m3": { "type": ["number", "null"] },
+        "peak_power_max_W": { "type": ["number", "null"] }
+      },
+      "additionalProperties": false
+    },
+
+    "atmosphere_model_id": { "type": "string" },
+    "aero_model_id": { "type": "string" },
+    "thermal_model_id": { "type": "string" },
+    "gnc_model_id": { "type": "string" },
+    "prebrake_model_id": { "type": "string" },
+
+    "params": { "type": "object" }
+  },
+  "additionalProperties": false
+}
